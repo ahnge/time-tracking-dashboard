@@ -1,0 +1,118 @@
+@use "../util" as *;
+
+.second {
+  &__bg {
+    border-radius: rem(12);
+    padding-top: rem(35);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      width: rem(77);
+      height: rem(77);
+      position: absolute;
+      top: rem(-10);
+      right: rem(20);
+    }
+
+    &--work {
+      background-color: var(--Light-red-work);
+
+      &::before {
+        background: url(../images/icon-work.svg);
+      }
+    }
+
+    &--play {
+      background-color: var(--Soft-blue-play);
+
+      &::before {
+        background: url(../images/icon-play.svg);
+      }
+    }
+
+    &--study {
+      background-color: var(--Light-red-study);
+
+      &::before {
+        background: url(../images/icon-study.svg);
+      }
+    }
+
+    &--exercise {
+      background-color: var(--Lime-green-exercise);
+
+      &::before {
+        background: url(../images/icon-exercise.svg);
+      }
+    }
+
+    &--social {
+      background-color: var(--Violet-social);
+
+      &::before {
+        background: url(../images/icon-social.svg);
+      }
+    }
+
+    &--self-care {
+      background-color: var(--Soft-orange-self-care);
+
+      &::before {
+        background: url(../images/icon-self-care.svg);
+      }
+    }
+  }
+
+  &__main {
+    background-color: var(--Dark-blue);
+    border-radius: rem(12);
+    padding: rem(30) rem(23);
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--hover);
+    }
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: rem(18);
+
+      @include breakpoint(large) {
+        margin-bottom: rem(40);
+      }
+
+      h2 {
+        font-weight: 500;
+      }
+    }
+
+    &--bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include breakpoint(large) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h3 {
+        font-size: rem(25);
+        font-weight: 300;
+        color: white;
+        display: inline-block;
+
+        @include breakpoint(large) {
+          font-size: rem(42);
+          margin-bottom: rem(24);
+        }
+      }
+    }
+  }
+}

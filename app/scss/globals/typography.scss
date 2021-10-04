@@ -1,0 +1,26 @@
+@use "../util" as *;
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+p {
+  font-size: rem(16);
+  color: var(--Pale-Blue);
+  margin: 0;
+}
+
+h2 {
+  color: white;
+  font-size: rem(18);
+  margin: 0;
+}
